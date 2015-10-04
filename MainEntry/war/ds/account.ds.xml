@@ -1,0 +1,19 @@
+<DataSource ID="account" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.Account"
+	schemaBean="jpac.express.domain.Account">
+	<field name="accountID" hidden="true" primaryKey="true" />
+	<field name="contact" type="contact" multiple="true" hidden="true"
+		foreignKey="contact.accountID" />
+	<field name="accountDetails" type="accountDetails" hidden="true"
+		foreignKey="accountDetails.accountID" />
+	<field name="accountRole" title="ประเภทผู้ใช้งาน">
+		<valueMap>
+			<value ID="1">ผู้ดูแลระบบ</value>
+			<value ID="2">พนักงาน</value>
+			<value ID="3">ผู้จัดการ</value>
+		</valueMap>
+	</field>
+	<field name="accountUsername" title="ชื่อผู้ใช้งาน" />
+	<field name="accountPassword" title="รหัสผ่าน" />
+
+</DataSource>  

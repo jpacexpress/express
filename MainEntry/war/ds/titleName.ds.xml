@@ -1,0 +1,7 @@
+<DataSource ID="titleName" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.TitleName"
+	schemaBean="jpac.express.domain.TitleName">
+
+	<field name="titleNameId" primaryKey="true" />
+
+</DataSource>  

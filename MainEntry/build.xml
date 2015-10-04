@@ -1,0 +1,28 @@
+<project name="jpac.express" default="gen-gwt-service" basedir=".">
+	<property file="build.properties" />
+
+	<path id="classpath">
+		<fileset dir="war/WEB-INF/classes">
+			<include name="**/*.class" />
+		</fileset>
+		<fileset dir="war/WEB-INF/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="gen-gwt-service">
+		<input
+			message="Input a GWT service name. (ex.  FooService -> root.client.service.FooService,  bar.FooService -> root.client.service.bar.FooService)"
+			addproperty="serviceDefinition" />
+		<gen-gwt-service srcdir="${srcDir}" testdir="${testDir}"
+			wardir="${warDir}" serviceDefinition="${serviceDefinition}"
+			serviceClassNameProperty="serviceClassName" />
+		<gen-gwt-service-impl srcdir="${srcDir}" testdir="${testDir}"
+			wardir="${warDir}" serviceDefinition="${serviceDefinition}"
+			serviceClassName="${serviceClassName}" />
+	</target>
+
+</project>

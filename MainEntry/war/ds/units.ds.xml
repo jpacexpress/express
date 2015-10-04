@@ -1,0 +1,12 @@
+<DataSource ID="units" serverType="hibernate"
+	serverConstructor="jpac.express.server.datasource.UnitsList"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.Units"
+	schemaBean="jpac.express.domain.Units">
+	<field name="unitsId" primaryKey="true" />
+
+</DataSource>
+
+<!-- <DataSource ID="units" serverType="hibernate" serverConstructor="jpac.express.server.GridUpdatesDataSource" 
+	allowMultiUpdate="true" tableName="units" recordName="units" beanClassName="jpac.express.domain.Units" 
+	schemaBean="jpac.express.domain.Units"> <field name="unitsId" primaryKey="true" 
+	/> </DataSource> -->

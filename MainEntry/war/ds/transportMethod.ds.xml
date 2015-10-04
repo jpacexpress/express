@@ -1,0 +1,6 @@
+<DataSource ID="transportMethod" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.TransportMethod"
+	schemaBean="jpac.express.domain.TransportMethod">
+	<field name="transportMethodId" primaryKey="true" />
+
+</DataSource>  

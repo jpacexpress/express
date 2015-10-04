@@ -1,0 +1,10 @@
+<DataSource ID="goodsItem" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.GoodsItem"
+	schemaBean="jpac.express.domain.GoodsItem">
+	
+	<fields>
+		<field name="goodsItemId" hidden="true" primaryKey="true" />
+		<field name="hs" type="integer" foreignKey="hs.hsId" multiple="true" />
+	</fields>
+	
+</DataSource>

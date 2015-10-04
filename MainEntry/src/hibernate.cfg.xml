@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration SYSTEM
+    "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <!-- 
+        <property name="connection.driver_class">com.mysql.jdbc.GoogleDriver</property>
+        <property name="connection.url">jdbc:google:mysql://jpacexpress:dbinstance/jpac?user=root</property>
+         -->
+        
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/jpac</property>
+        
+        <property name="connection.username">root</property>
+        <property name="connection.password">7234</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">0</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+		<!-- Release database connections when session are closed.  Otherwise, if the DB
+             agressively cuts connections, we could end up trying to use a broken connection.
+        -->
+        <property name="hibernate.connection.release_mode">on_close</property>
+        
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+		<mapping class="jpac.express.domain.Account"/>
+		<mapping class="jpac.express.domain.AccountDetails"/>
+		<mapping class="jpac.express.domain.Contact"/>
+		
+		<mapping class="jpac.express.domain.TransportMethod"/>
+		<mapping class="jpac.express.domain.SalesArea"/>
+		<mapping class="jpac.express.domain.TitleName"/>
+		<mapping class="jpac.express.domain.CustomerType"/>
+		<mapping class="jpac.express.domain.Department"/>
+		<mapping class="jpac.express.domain.SalesType"/>
+		<mapping class="jpac.express.domain.Units"/>
+		<mapping class="jpac.express.domain.GoodsItem"/>
+		<mapping class="jpac.express.domain.GoodsCategory"/>
+		<mapping class="jpac.express.domain.Notes"/>
+		<mapping class="jpac.express.domain.TransportAddress"/>
+		<mapping class="jpac.express.domain.Customer"/>
+		<mapping class="jpac.express.domain.Sales"/>
+		<mapping class="jpac.express.domain.Hs"/>
+		<mapping class="jpac.express.domain.DocumentNumber"/>
+	
+    </session-factory>
+
+</hibernate-configuration>

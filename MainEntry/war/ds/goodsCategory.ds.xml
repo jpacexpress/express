@@ -1,0 +1,6 @@
+<DataSource ID="goodsCategory" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.GoodsCategory"
+	schemaBean="jpac.express.domain.GoodsCategory">
+	<field name="goodsCategoryId" primaryKey="true" />
+
+</DataSource>  

@@ -1,0 +1,17 @@
+<DataSource ID="sales" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.Sales"
+	schemaBean="jpac.express.domain.Sales">
+	<fields>
+		<field name="salesId" canEdit="true" primaryKey="true" />
+
+		<field name="salesArea" type="integer" foreignKey="salesArea.salesAreaId" multiple="true" />
+		<field name="salesType" type="integer" foreignKey="salesType.salesTypeId" multiple="true" />
+		<field name="customer" type="integer" foreignKey="customer.customerId" multiple="true" />
+		<!--
+		<field name="salesArea" canEdit="true" displayField="salesAreaId" foreignKey="salesArea.salesAreaId" /> 
+		<field name="salesType" canEdit="true" displayField="salesTypeId" foreignKey="salesType.salesTypeId" /> 
+		-->
+
+	</fields>
+
+</DataSource>  

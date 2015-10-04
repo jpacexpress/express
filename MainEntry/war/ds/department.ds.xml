@@ -1,0 +1,8 @@
+<DataSource ID="department" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.Department"
+	schemaBean="jpac.express.domain.Department">
+	<fields>
+		<field name="departmentId" primaryKey="true" />
+		<field name="hs" type="integer" foreignKey="hs.hsId" multiple="true" />
+	</fields>
+</DataSource>  

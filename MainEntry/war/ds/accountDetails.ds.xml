@@ -1,0 +1,15 @@
+<DataSource ID="accountDetails" serverType="hibernate"
+	beanClassName="jpac.express.domain.AccountDetails" schemaBean="jpac.express.domain.AccountDetails">
+
+	<field name="accountTitleName" title="คำนำหน้าชื่อ">
+		<valueMap>
+			<value ID="1">นาย</value>
+			<value ID="2">นาง</value>
+			<value ID="3">นางสาว</value>
+		</valueMap>
+	</field>
+
+	<field name="accountFirstName" title="ชื่อจริง" />
+	<field name="accountLastName" title="นามสกุล" />
+	<field name="accountRegisteredDate" title="วันที่เปิดใช้งาน" />
+</DataSource>  

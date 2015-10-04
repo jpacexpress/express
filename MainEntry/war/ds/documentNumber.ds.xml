@@ -1,0 +1,9 @@
+<DataSource ID="documentNumber" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.DocumentNumber"
+	schemaBean="jpac.express.domain.DocumentNumber">
+
+	<fields>
+		<field name="documentNumberId" canEdit="true" primaryKey="true" />
+	</fields>
+
+</DataSource>

@@ -1,0 +1,6 @@
+<DataSource ID="customerType" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.CustomerType"
+	schemaBean="jpac.express.domain.CustomerType">
+	<field name="customerTypeId" primaryKey="true" />
+
+</DataSource>  

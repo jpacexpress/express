@@ -1,0 +1,18 @@
+<DataSource ID="customer" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.Customer"
+	schemaBean="jpac.express.domain.Customer">
+	<fields>
+		<field name="customerId" canEdit="true" primaryKey="true" />
+		
+		<field name="notes" type="integer" foreignKey="notes.notesId" multiple="true" />
+		<field name="transportAddress" hidden="true" multiple="true" type="transportAddress" foreignKey="transportAddress.transportAddressId" />
+		<field name="sales" type="integer" foreignKey="sales.salesId" multiple="true" />
+		<field name="hs" type="integer" foreignKey="hs.hsId" multiple="true" />
+		<!--
+		
+		<field name="transportAddress" type="transportAddress" foreignKey="transportAddress.transportAddressId" multiple="true" />
+		<field name="notes" hidden="true" multiple="true" type="notes" foreignKey="notes.notesDetails" />
+		-->
+	</fields>
+
+</DataSource>  

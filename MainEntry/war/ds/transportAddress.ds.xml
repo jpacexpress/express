@@ -1,0 +1,14 @@
+<DataSource ID="transportAddress" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.TransportAddress"
+	schemaBean="jpac.express.domain.TransportAddress">
+	<fields>
+		<field name="transportAddressId" primaryKey="true" />
+		
+		<field name="customer" canEdit="true" displayField="customerId" foreignKey="customer.customerId" />
+		<!--
+		<field name="customer" type="customer" foreignKey="customer.customerId" multiple="true" />
+		-->
+	</fields>
+	
+	
+</DataSource>  

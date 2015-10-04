@@ -1,0 +1,10 @@
+<DataSource ID="contact" serverType="hibernate"
+	allowMultiUpdate="true" beanClassName="jpac.express.domain.Contact"
+	schemaBean="jpac.express.domain.Contact">
+
+	<field name="accountID" hidden="true" />
+	<field name="contactAddress" title="ที่อยู่" />
+	<field name="contactEmail" title="อีเมล" />
+	<field name="contactTel" title="เบอร์โทรศัพท์" />
+
+</DataSource>
